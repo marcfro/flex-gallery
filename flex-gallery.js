@@ -14,7 +14,7 @@ FlexGallery = (function() {
       id: 'flexGallery',
       gutter: 20,
       columnWidth: 260,
-      fireOnComplete: 'tiler:complete',
+      fireOnComplete: 'flex-gallery',
       addFillers: true
     };
     this.options = this.extend(defOptions, options);

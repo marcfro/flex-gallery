@@ -9,7 +9,7 @@ class FlexGallery
 			id: 'flexGallery'
 			gutter: 20 #minimum size - will expand to fit parent evenly
 			columnWidth: 260 #min-width
-			fireOnComplete: 'tiler:complete'
+			fireOnComplete: 'flex-gallery'
 			addFillers: yes
 		}
 		@options = @extend defOptions, options
