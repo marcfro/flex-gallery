@@ -3,6 +3,11 @@ FlexGallery
 
 FlexGallery is a very lightweight plugin (3kb) which takes any `ul` element and lays out the `li` elements left to right and fills in the shortest row with the next element... Pinterest-like.
 
+Requirements
+------------
+
+jQuery 1.x
+
 
 Installation
 ------------
@@ -14,7 +19,7 @@ Include the flex-gallery-min.js in your document
 Usage
 -----
 
-Give your `ul` element an `id` (the default is 'flexList') and create a new FlexGallery (after jQuery has loaded)
+Give your `ul` element an `id` (the default is 'flexGallery') and create a new FlexGallery (after jQuery has loaded)
 
 	var flexGallery = new FlexGallery( {id: 'customId'} );
 
@@ -27,7 +32,7 @@ Pass in an object with any of the following properties to override:
 
 
 	{
-		id: 'flexList',
+		id: 'flexGallery',
 		gutter: 20, //minimum size - will expand to fit parent evenly
 		columnWidth: 260,
 		fireOnComplete: 'flex-gallery', //triggers jquery event when draw is complete
