@@ -1,3 +1,4 @@
+# /*! FlexGallery v0.0.1 | https://github.com/marcfro/flex-gallery | Copyright 2013, Marco DiDomenico | http://kit.mit-license.org */
 
 class FlexGallery
 	
@@ -16,13 +17,13 @@ class FlexGallery
 		$('#'+@options.id).css({'position':'relative', 'display':'block', 'margin':'0','padding':'0'})
 		i = @
 		$(window).resize -> i.draw()
-		$(window).load -> i.draw()
+		$(window).on('load', -> i.draw(yes))
 		@draw()
 	
-	draw: =>
-		redraw = no
+	draw: (force = no) =>
+		redraw = force
 		newWidth = $('#'+@options.id).parent().width()
-		if @parentWidth is 0 or newWidth isnt @parentWidth
+		if @parentWidth is 0 or newWidth isnt @parentWidth or force
 			redraw = yes
 			@parentWidth = newWidth
 			startingColumnCount = Math.floor (@parentWidth / @options.columnWidth)
